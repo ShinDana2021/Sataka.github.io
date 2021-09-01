@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./access/fomts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./access/CSS/main.css">
     <title>Style Conferce Fake</title>
 </head>
@@ -16,6 +17,21 @@
                     Styles 
                     <br style="height: 59px;">
                         Conference
+                    <div class="menu">
+                        <i class="ti-menu"></i>
+                    </div>
+                    <div class="navbar-mobile">
+                        <ul>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">SPEAKERs</a></li>
+                            <li><a href="#">SCHEDULE</a></li>
+                            <li><a href="#">VENUE</a></li>
+                            <li><a href="#">REGISTER</a></li>
+                        </ul>
+                        <div class="close">
+                            <i class="ti-close"></i>
+                        </div>
+                    </div>
                 </h1>
                 <!-- Navbar -->
                 <div class="nav">
@@ -77,5 +93,18 @@
             </ul>
         </div>
     </div>
+    <script>
+        // bật sự kiện cho nút menu
+        var menu = document.querySelector('.menu')
+        menu.onclick = function() {
+            nav.style.display = 'block'
+        }
+        // bật sử kiện cho nút close
+        var a = document.querySelector('.close')
+        var nav = document.querySelector('.navbar-mobile')
+        a.onclick = function() {
+            nav.style.display = 'none'
+        }
+    </script>
 </body>
 </html>

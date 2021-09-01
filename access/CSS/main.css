@@ -16,7 +16,7 @@ html {
 
 /* Header */
 .head {
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
 }
 .header {
@@ -37,6 +37,9 @@ html {
     color: #648880;
     cursor: pointer;
 }
+.header .menu {
+    display: none;
+}
 
 /* NavBar */
 .nav .date {
@@ -56,6 +59,7 @@ html {
     font-size: 14px;
     justify-content: space-between;
 }
+.navbar-moible ul>li,
 .nav .navbar ul>li{
     margin: 0 10px;
 }
@@ -69,10 +73,30 @@ html {
 .nav .navbar ul>li>a:hover {
     color: #648880;
 }
+.navbar-mobile {
+    display: none;
+}
+.navbar-mobile ul {
+    background-color: rgb(0,0,0);
+    list-style: none;
+    text-align: center;
+    line-height: 65px;
+}
+.navbar-mobile>ul>li>a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    vertical-align: baseline;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.close {
+    display: none;
+}
 
 /* Section */
 .section {
-    width: 960px;
+    max-width: 960px;
     padding: 22px 80px 66px;
     margin: 0 auto;
     text-align: center;
@@ -89,7 +113,7 @@ html {
     font-weight: 100;
 }
 .section .btn {
-    width: 183px;
+    max-width: 183px;
     height: 66px;
     margin: auto;
     padding: 10px 30px;
@@ -109,7 +133,7 @@ html {
 /* Content */
 .B .content {
     padding-top: 66px;
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
     display: flex;
 }
@@ -125,7 +149,7 @@ html {
     font-weight: 500;
 }
 .img-list {
-    width: 100%;
+    max-width: 100%;
     border-radius: 5px;
     margin-bottom: 22px;
 }
@@ -150,7 +174,7 @@ html {
 
 /* Footer */
 .footer {
-    width: 960px;
+    max-width: 960px;
     padding: 44px 15px;
     margin: 0 auto;
 }
@@ -178,3 +202,76 @@ html {
     line-height: 22px;
     font-size: 14px;
 }
+
+/* Responsive */
+@media (max-width: 740px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header>h1, .header>.nav,.header>.nav>.navbar {
+        flex: 1;
+
+    }
+    .header>h1{
+        position: relative;
+    }
+    .header h1:hover {
+        color: #fff;
+    }
+    .header>.nav {
+        display: flex;
+        justify-content: center;
+    }
+    .header> .date {
+        margin: 0 auto;
+    }
+    .header>.nav>.navbar{
+        display: none;
+    }
+    .B .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .B >.content>.col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .B >.content>.col>h3, 
+    .B >.content>.col>p,
+    .B >.content>.col>h5,
+    .B >.content>.col>.img-list {
+        flex: 1;
+    }
+    .header .menu {
+        width: 50px;
+        height: 50px;
+        display: block;
+        font-size: 30px;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+
+    }
+    .navbar-mobile{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+    }
+    .close{
+        font-size: 30px;
+        width: 30px;
+        height: 30px;
+        display: block;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        color: #fff;
+    }
+
+}
+
