@@ -114,7 +114,7 @@ html {
 }
 .section .btn {
     max-width: 183px;
-    height: 66px;
+    height: auto;
     margin: auto;
     padding: 10px 30px;
     border: 1px solid #fff;
@@ -202,4 +202,3 @@ html {
     line-height: 22px;
     font-size: 14px;
 }
-
